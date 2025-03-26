@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weekly Schedule</title>
+</head>
+<body>
+    <h1>Weekly Schedule</h1>
+    <table border="1">
+        <tr>
+            <th>Employee</th>
+            <th>Day</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+        </tr>
+        {% for shift in weekly_shifts %}
+            <tr>
+                <td>{{ shift[0] }}</td>
+                <td>{{ shift[1] }}</td>
+                <td>{{ shift[2] }}</td>
+                <td>{{ shift[3] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <a href="/">Back to Dashboard</a>
+</body>
+</html>

@@ -1,0 +1,1 @@
+Start app.py and go to the http address to access the schedule application 

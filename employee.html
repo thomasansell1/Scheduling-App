@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ employee_name }}'s Schedule</title>
+</head>
+<body>
+    <h1>{{ employee_name }}'s Weekly Schedule</h1>
+    <ul>
+        {% for shift in shifts %}
+            <li>{{ shift[0] }}: {{ shift[1] }} - {{ shift[2] }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Back to Dashboard</a>
+</body>
+</html>

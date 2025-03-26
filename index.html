@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manager Dashboard</title>
+</head>
+<body>
+    <h1>Manager Dashboard</h1>
+    <h2>Employees</h2>
+    <ul>
+        {% for employee in employees %}
+            <li>
+                <a href="/employee/{{ employee[0] }}">{{ employee[1] }}</a>
+                <a href="/add_shift/{{ employee[0] }}">Assign Shifts</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <h2>Add Employee</h2>
+    <form action="/add_employee" method="POST">
+        <input type="text" name="name" placeholder="Employee Name" required>
+        <button type="submit">Add Employee</button>
+    </form>
+    <br>
+    <a href="/weekly_schedule">View Weekly Schedule</a>
+</body>
+</html>
